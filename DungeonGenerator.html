@@ -1,0 +1,47 @@
+<head>
+	<title>Dungeon generation visualisation</title>
+</head>
+
+<body onload="setFormParameters()">
+    <canvas width="500" height="500" id="cv"></canvas>
+    <script src="prims.js" type="text/javascript"></script>
+    <script src="delaunay.js" type="text/javascript"></script>
+    <script src="common.js" type="text/javascript"></script>
+
+    <br>
+    <button onclick="getFormParameters(); remakeMap()">Generate again</button><br />
+
+    Minimum room width:
+    <input id="roomMinW" /><br />
+    Maximum room width:
+    <input id="roomMaxW" /><br /><br />
+    Minimum room height:
+    <input id="roomMinH" /><br />
+    Maximum room height:
+    <input id="roomMaxH" /><br /><br />
+
+    Coverage wanted:
+    <input id="coverageWanted" /><br />
+
+    Room padding:
+    <input id="roomPadding" /><br />
+
+    Change to restore deleted edges (0.0 - 1.0):
+    <input id="restoreChance" /><br />
+
+    Mean ratio:
+    <input id="meanRatio" /><br /><br />
+
+    Draw rooms that failed mean test:
+    <input type="checkbox" id="drawOffRooms" checked /><br />
+
+    Draw minimum spanning tree:
+    <input type="checkbox" id="drawMST" /><br />
+
+    Show room IDs:
+    <input type="checkbox" id="drawRoomID" /><br />
+
+    <p id="timeTaken"></p>
+
+    <script src="gen2.js" type="text/javascript"></script>
+</body>
