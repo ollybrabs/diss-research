@@ -25,3 +25,8 @@ Contains a JavaScript implementation for the methods used in the dungeon generat
 
 ### Example output (high coverage, lower mean ratio, debug settings)
 ![High coverage with debug](/samples/generator3.PNG)
+
+## Early C# Unity implementation
+* Fully tileable dungeons
+* Corridors generated using a C# implementation of the A* search algorithm on a randomly weighted grid of cells
+![Unity implementation](/samples/unitysample1.PNG)
